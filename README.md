@@ -1,10 +1,12 @@
-#
+# To the Moon: [GraphQL Caching with Layer0] 
+A demo showing off GraphQL Caching with Layer0.
 
 ## Demo
+https://layer0-docs-graphql-caching-example-default.layer0-limelight.link/
 
 ## Try It Now
 
-[![Deploy with Layer0](https://a.storyblok.com/f/117912/x/e4e996094a/frame-1.svg)](https://app.layer0.co/deploy?repo=https://github.com/layer0-docs/graphql-caching-example)
+[![Deploy with Layer0](https://docs.layer0.co/button.svg)](https://app.layer0.co/deploy?repo=https://github.com/layer0-docs/graphql-caching-example)
 
 ## Getting Started
 
