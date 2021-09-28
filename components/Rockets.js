@@ -34,7 +34,7 @@ const Rockets = () => {
       <div className="flex flex-row items-center justify-between">
         <h1 className="flex flex-row items-center">
           <span className="text-2xl">Rockets</span>
-          <small>(Uncached)</small>
+          <small>&nbsp;(Uncached)</small>
         </h1>
         <div className="px-2 py-1 border shadow rounded">
           <b className="text-gray-500">{timing || '--'}ms</b>

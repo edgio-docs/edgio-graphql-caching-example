@@ -51,13 +51,13 @@ const Missions = () => {
     <div className="flex flex-col">
       <div className="flex flex-row items-center justify-between">
         <h1 className="flex flex-row items-center">
-          <span className="text-2xl">Missions</span> <small>(Cached on Edge)</small>
+          <span className="text-2xl">Missions</span> <small>&nbsp;(Cached on Edge)</small>
         </h1>
         <div className="px-2 py-1 border shadow rounded">
           <b className="text-gray-500">{timing || '--'}ms</b>
         </div>
       </div>
-      <div className="mb-5 mt-5 flex flex-row items-center justify-between">
+      <div className="mb-5 mt-5 flex flex-row flex-wrap gap-2 items-center justify-between">
         <Button
           text={loading ? 'Refetching...' : 'Refetch'}
           callback={refetch}
@@ -65,7 +65,7 @@ const Missions = () => {
           bgColor={loading ? '#e95495' : '#35274B'}
         />
         <Button
-          text={`Sort by Launch ${sortAscending ? '↗' : '↘'}`}
+          text={`Sort by Launch ${sortAscending ? '↑' : '↓'}`}
           bgColor="#35274B"
           callback={() => setSortAscending(!sortAscending)}
         />
