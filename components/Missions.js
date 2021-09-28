@@ -1,5 +1,5 @@
 import { useQuery } from '@apollo/client'
-import { MISSIONS } from '@/lib/query'
+import { missionsQuery } from '@/lib/query'
 import { useEffect, useRef, useState } from 'react'
 import Button from './Button'
 import Mission from './Mission'
@@ -8,12 +8,16 @@ import Loader from './Loader'
 const Missions = () => {
   const startTime = useRef(Date.now())
   const [timing, setTiming] = useState(0)
+  const [sortAscending, setSortAscending] = useState(false)
   const {
     loading,
     error,
     data = { launchesPast: [] },
     refetch,
-  } = useQuery(MISSIONS, { fetchPolicy: 'network-only', notifyOnNetworkStatusChange: true })
+  } = useQuery(missionsQuery(3, `${sortAscending ? '' : '-'}launch_date_local`), {
+    fetchPolicy: 'network-only',
+    notifyOnNetworkStatusChange: true,
+  })
   const [purging, setPurging] = useState(false)
 
   useEffect(() => {
@@ -29,17 +33,18 @@ const Missions = () => {
   if (error) return <p>Error :(</p>
 
   const missions = [...data.launchesPast]
-    .sort((a, b) => new Date(b.launch_date_local) - new Date(a.launch_date_local))
-    .slice(0, 3)
+    .sort((a, b) => {
+      let diff = new Date(b.launch_date_local) - new Date(a.launch_date_local)
+      if (sortAscending) diff *= -1
+      return diff
+    })
     .map((item) => <Mission {...item} key={item.mission_name} />)
 
   async function purge() {
     setPurging(true)
-    await fetch('/api/purge')
-      .then((res) => res.json())
-      .then((res) => {
-        setPurging(false)
-      })
+    await fetch('/api/purge').then((_) => {
+      setPurging(false)
+    })
   }
 
   return (
@@ -58,6 +63,11 @@ const Missions = () => {
           callback={refetch}
           disabled={loading}
           bgColor={loading ? '#e95495' : '#35274B'}
+        />
+        <Button
+          text={`Sort by Launch ${sortAscending ? '↗' : '↘'}`}
+          bgColor="#35274B"
+          callback={() => setSortAscending(!sortAscending)}
         />
         <Button
           text={purging ? 'Purging Cache...' : 'Purge Cache'}
