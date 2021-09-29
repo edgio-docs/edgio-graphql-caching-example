@@ -20,9 +20,6 @@ name: Deploy branch to Layer0
 
 on:
   workflow_dispatch:
-  push:
-  release:
-    types: [published]
 
 jobs:
   deploy-to-layer0:
