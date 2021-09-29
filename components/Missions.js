@@ -57,18 +57,16 @@ const Missions = () => {
           <b className="text-gray-500">{timing || '--'}ms</b>
         </div>
       </div>
-      <div className="mt-5 mb-5">This section is cached on Layer0. Refetches will be <span className="font-bold">faster</span>.</div>
+      <div className="mt-5 mb-5">
+        This section is cached on Layer0. Refetches will be{' '}
+        <span className="font-bold">faster</span>.
+      </div>
       <div className="mb-5 mt-5 flex flex-row flex-wrap gap-2 items-center justify-between">
         <Button
           text={loading ? 'Refetching...' : 'Refetch'}
           callback={refetch}
           disabled={loading}
           bgColor={loading ? '#e95495' : '#35274B'}
-        />
-        <Button
-          text={`Sort by Launch ${sortAscending ? '↑' : '↓'}`}
-          bgColor="#35274B"
-          callback={() => setSortAscending(!sortAscending)}
         />
         <Button
           text={purging ? 'Purging Cache...' : 'Purge Cache'}
