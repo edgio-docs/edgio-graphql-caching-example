@@ -15,7 +15,6 @@ module.exports = new Router()
       },
       browser: {
         maxAgeSeconds: 0,
-        // serviceWorkerSeconds: 60 * 60 * 24,
       },
     })
     proxy('graphql') // forward posts requests to apollo unaltered

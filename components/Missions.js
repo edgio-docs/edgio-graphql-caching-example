@@ -18,7 +18,6 @@ const Missions = () => {
     fetchPolicy: 'network-only',
     notifyOnNetworkStatusChange: true,
   })
-  const [purging, setPurging] = useState(false)
 
   useEffect(() => {
     if (loading) {
@@ -40,13 +39,6 @@ const Missions = () => {
     })
     .map((item) => <Mission {...item} key={item.mission_name} />)
 
-  async function purge() {
-    setPurging(true)
-    await fetch('/api/purge', { method: 'post' }).then((_) => {
-      setPurging(false)
-    })
-  }
-
   return (
     <div className="flex flex-col">
       <div className="flex flex-row items-center justify-between">
@@ -67,12 +59,6 @@ const Missions = () => {
           callback={refetch}
           disabled={loading}
           bgColor={loading ? '#e95495' : '#35274B'}
-        />
-        <Button
-          text={purging ? 'Purging Cache...' : 'Purge Cache'}
-          callback={purge}
-          disabled={purging}
-          bgColor={!purging ? '#e95495' : '#004b64'}
         />
       </div>
       {loading ? (
