@@ -13,6 +13,10 @@ module.exports = new Router()
         maxAgeSeconds: 60 * 60,
         staleWhileRevalidateSeconds: 60 * 60 * 24, // this way stale items can still be prefetched
       },
+      browser: {
+        maxAgeSeconds: 0,
+        serviceWorkerSeconds: 60 * 60 * 24,
+      },
     })
     proxy('graphql') // forward posts requests to apollo unaltered
   })

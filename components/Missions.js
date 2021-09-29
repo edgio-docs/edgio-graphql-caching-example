@@ -8,7 +8,7 @@ import Loader from './Loader'
 const Missions = () => {
   const startTime = useRef(Date.now())
   const [timing, setTiming] = useState(0)
-  const [sortAscending, setSortAscending] = useState(false)
+  const sortAscending = false
   const {
     loading,
     error,
@@ -42,7 +42,7 @@ const Missions = () => {
 
   async function purge() {
     setPurging(true)
-    await fetch('/api/purge').then((_) => {
+    await fetch('/api/purge', { method: 'post' }).then((_) => {
       setPurging(false)
     })
   }

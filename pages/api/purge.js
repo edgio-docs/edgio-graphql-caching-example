@@ -1,8 +1,8 @@
 const fetch = require('node-fetch')
 
 const deployToken = process.env.DEPLOY_TOKEN
-const team = 'richard-vanderdys'
-const site = 'spacex-graphql-layer0'
+const team = 'layer0-docs'
+const site = 'graphql-caching-example'
 const environment = 'default'
 const paths = ['/*']
 
