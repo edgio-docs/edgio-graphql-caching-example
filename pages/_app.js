@@ -1,16 +1,10 @@
 import '../styles/globals.css'
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink as apolloCreateHttpLink,
-} from '@apollo/client'
-import { createHttpLink } from '@layer0/apollo'
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 
 function MyApp({ Component, pageProps }) {
   const client = new ApolloClient({
     cache: new InMemoryCache(),
-    link: createHttpLink({ uri: '/graphql' }, apolloCreateHttpLink),
+    uri: '/graphql',
   })
   return (
     <div className="bg-white text-black font-display flex flex-col items-center">
