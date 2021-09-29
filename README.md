@@ -1,7 +1,9 @@
-# To the Moon: [GraphQL Caching with Layer0] 
+# To the Moon: [GraphQL Caching with Layer0]
+
 A demo showing off GraphQL Caching with Layer0.
 
 ## Demo
+
 https://layer0-docs-graphql-caching-example-default.layer0-limelight.link/
 
 ## Try It Now
