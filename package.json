@@ -2,10 +2,11 @@
   "scripts": {
     "layer0:dev": "layer0 dev",
     "layer0:build": "layer0 build",
-    "layer0:deploy": "layer0 deploy",
+    "layer0:deploy": "layer0 deploy layer0-docs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "deploy": "layer0 deploy",
     "lint": "next lint",
     "format": "prettier '**/*' --write --ignore-unknown"
   },
