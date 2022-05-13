@@ -21,7 +21,7 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@layer0/cli": "4.0.1-next-1632405384-b3d555c48.0",
+    "@layer0/cli": "4.13.10",
     "@layer0/core": "4.0.1-next-1632405384-b3d555c48.0",
     "@layer0/devtools": "4.0.1-next-1632405384-b3d555c48.0",
     "@layer0/next": "4.0.1-next-1632405384-b3d555c48.0",
