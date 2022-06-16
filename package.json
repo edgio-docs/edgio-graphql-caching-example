@@ -26,7 +26,7 @@
     "@layer0/devtools": "4.0.1-next-1632405384-b3d555c48.0",
     "@layer0/next": "4.0.1-next-1632405384-b3d555c48.0",
     "@layer0/prefetch": "4.0.1-next-1632405384-b3d555c48.0",
-    "@layer0/react": "4.0.1-next-1632405384-b3d555c48.0",
+    "@layer0/react": "4.13.17",
     "@tailwindcss/line-clamp": "^0.2.1",
     "autoprefixer": "^10.3.6",
     "eslint": "7.32.0",
