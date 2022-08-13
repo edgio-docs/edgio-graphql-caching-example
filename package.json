@@ -1,38 +1,33 @@
 {
+  "name": "graphql-caching-example",
   "scripts": {
-    "layer0:dev": "layer0 dev",
-    "layer0:build": "layer0 build",
-    "layer0:deploy": "layer0 deploy layer0-docs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy": "layer0 deploy",
-    "lint": "next lint",
+    "layer0:dev": "layer0 dev",
+    "layer0:build": "layer0 build",
+    "layer0:deploy": "layer0 deploy",
+    "layer0:production": "layer0 run --production",
     "format": "prettier '**/*' --write --ignore-unknown"
   },
-  "name": "graphql-caching-example",
-  "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@apollo/client": "^3.4.8",
     "graphql": "^15.5.1",
-    "next": "11.0.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "next": "^12.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@layer0/cli": "4.0.1-next-1632405384-b3d555c48.0",
-    "@layer0/core": "4.0.1-next-1632405384-b3d555c48.0",
-    "@layer0/devtools": "4.0.1-next-1632405384-b3d555c48.0",
-    "@layer0/next": "4.0.1-next-1632405384-b3d555c48.0",
-    "@layer0/prefetch": "4.0.1-next-1632405384-b3d555c48.0",
-    "@layer0/react": "4.0.1-next-1632405384-b3d555c48.0",
+    "@layer0/cli": "^4.18.1",
+    "@layer0/core": "^4.18.1",
+    "@layer0/devtools": "^4.18.1",
+    "@layer0/next": "^4.18.1",
+    "@layer0/prefetch": "^4.18.1",
+    "@layer0/react": "^4.18.1",
     "@tailwindcss/line-clamp": "^0.2.1",
     "autoprefixer": "^10.3.6",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.0.1",
     "postcss": "^8.3.8",
-    "prettier": "^2.4.1",
+    "prettier": "^2.7.1",
     "tailwindcss": "^2.2.16"
   }
 }

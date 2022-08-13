@@ -1,7 +1,7 @@
-import '../styles/globals.css'
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
-import install from '@layer0/prefetch/window/install'
+import '@/styles/globals.css'
 import { useEffect } from 'react'
+import install from '@layer0/prefetch/window/install'
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 
 function MyApp({ Component, pageProps }) {
   const client = new ApolloClient({
