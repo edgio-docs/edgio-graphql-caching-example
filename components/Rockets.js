@@ -8,12 +8,7 @@ import Loader from './Loader'
 const Rockets = () => {
   const startTime = useRef(Date.now())
   const [timing, setTiming] = useState(0)
-  const {
-    loading,
-    error,
-    data = { rockets: [] },
-    refetch,
-  } = useQuery(ROCKETS, { fetchPolicy: 'network-only', notifyOnNetworkStatusChange: true })
+  const { loading, error, data = { rockets: [] }, refetch } = useQuery(ROCKETS, { fetchPolicy: 'network-only', notifyOnNetworkStatusChange: true })
 
   useEffect(() => {
     if (loading) {
@@ -40,14 +35,11 @@ const Rockets = () => {
           <b className="text-gray-500">{timing || '--'}ms</b>
         </div>
       </div>
-      <div className="mt-5 mb-5">This section is NOT cached. Refetches will be <span className="font-bold">slower</span>.</div>
+      <div className="mt-5 mb-5">
+        This section is NOT cached. Refetches will be <span className="font-bold">slower</span>.
+      </div>
       <div className="mb-5 mt-5 flex flex-row items-center justify-between">
-        <Button
-          text={loading ? 'Refetching...' : 'Refetch'}
-          callback={refetch}
-          disabled={loading}
-          bgColor={loading ? '#e95495' : '#35274B'}
-        />
+        <Button text={loading ? 'Refetching...' : 'Refetch'} callback={refetch} disabled={loading} bgColor={loading ? '#e95495' : '#35274B'} />
       </div>
       {loading ? (
         <div className="w-full p-5 flex flex-col items-center justify-center">
