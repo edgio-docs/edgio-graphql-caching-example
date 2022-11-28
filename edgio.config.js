@@ -1,5 +1,5 @@
 module.exports = {
-  connector: '@layer0/next',
+  connector: '@edgio/next',
   backends: {
     graphql: {
       domainOrIp: 'api.spacex.land',

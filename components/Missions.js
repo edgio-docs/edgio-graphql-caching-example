@@ -50,7 +50,7 @@ const Missions = () => {
         </div>
       </div>
       <div className="mt-5 mb-5">
-        This section is cached on Layer0. Refetches will be <span className="font-bold">faster</span>.
+        This section is cached on Edgio. Refetches will be <span className="font-bold">faster</span>.
       </div>
       <div className="mb-5 mt-5 flex flex-row flex-wrap gap-2 items-center justify-between">
         <Button text={loading ? 'Refetching...' : 'Refetch'} callback={refetch} disabled={loading} bgColor={loading ? '#e95495' : '#35274B'} />

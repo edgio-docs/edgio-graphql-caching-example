@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 import { useEffect } from 'react'
-import install from '@layer0/prefetch/window/install'
+import install from '@edgio/prefetch/window/install'
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 
 function MyApp({ Component, pageProps }) {

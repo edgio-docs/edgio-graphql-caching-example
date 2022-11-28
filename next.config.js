@@ -1,12 +1,12 @@
-const { withLayer0, withServiceWorker } = require('@layer0/next/config')
+const { withEdgio, withServiceWorker } = require('@edgio/next/config')
 
 const nextConfig = {
   output: 'standalone',
 }
 
-module.exports = withLayer0(
+module.exports = withEdgio(
   withServiceWorker({
-    layer0SourceMaps: true,
+    edgioSourceMaps: true,
     ...nextConfig,
   })
 )
